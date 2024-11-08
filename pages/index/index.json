@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my": "/pages/my/my",
+    "help":"/pages/help/help",
+    "resolution":"/pages/resolution/resolution"
+  }
+}

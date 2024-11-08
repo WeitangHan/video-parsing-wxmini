@@ -1,0 +1,60 @@
+  <view class="UCenter-bg">
+    <image src="" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <view class="padding flex text-center  bg-white radius">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">{{starCount}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-squarecheck"></text>累计签到</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">{{visitTotal}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-vip"></text>积分</view>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+    <view class="cu-item">
+      <button class="cu-btn content" bindtap="sign">
+        <text class="cuIcon-we text-blue"></text>
+        <text class="text-grey">签到</text>
+      </button>
+    </view>
+
+    <view class="cu-item arrow">
+      <view class="content" bindtap="showQrcode">
+        <text class="cuIcon-weixin text-green"></text>
+        <text class="text-grey">联系作者</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+
+<view class="cu-modal {{success?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">友情提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      签到成功积分<text style="color:red">+10</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-modal {{error?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">友情提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl" style="color:text-red">
+      <text style="color:red">一天签到一次～请勿重复签到</text>
+    </view>
+  </view>
+</view>
